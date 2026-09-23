@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pagamento - Demonstração</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- PRIMEIRO CARD -->
+        <section class="card aviso">
+
+            <div class="icone">
+                <span>R$</span>
+                <small>•••</small>
+            </div>
+
+            <p class="faltou">Falta pouco!</p>
+
+            <h1>
+                Pague <strong>R$ 5.850,48</strong> via Pix para
+                concluir sua compra
+            </h1>
+
+        </section>
+
+
+        <!-- SEGUNDO CARD -->
+        <section class="card pagamento">
+
+            <h2>Escaneie um código QR para pagar</h2>
+
+            <ol>
+                <li>Acesse seu Internet Banking ou app de pagamentos.</li>
+                <li>Escolha pagar via Pix.</li>
+                <li>Escaneie o seguinte código:</li>
+            </ol>
+
+
+            <!-- QR CODE DE DEMONSTRAÇÃO -->
+            <div class="qr-area">
+                <div class="qr-placeholder">
+                    <span>QR</span>
+                    <small>DEMO</small>
+                </div>
+            </div>
+
+
+            <p class="credito">
+                ◷ Pague e será creditado na hora.
+            </p>
+
+
+            <div class="info">
+                <span class="info-icon">i</span>
+
+                <span>
+                    Confirmaremos a data de entrega quando o pagamento
+                    for aprovado.
+                </span>
+            </div>
+
+
+            <div class="linha"></div>
+
+
+            <h2 class="ou">
+                Ou copie este código para fazer o pagamento
+            </h2>
+
+            <p class="descricao">
+                Escolha pagar via Pix pelo seu Internet Banking ou app
+                de pagamentos. Depois, cole o seguinte código:
+            </p>
+
+
+            <div class="codigo">
+                00020126540014br.gov.bcb.pix0132pix_demo_pagamento
+            </div>
+
+
+            <div class="acoes">
+
+                <button class="copiar" onclick="copiarCodigo()">
+                    Copiar código
+                </button>
+
+                <button class="compras">
+                    Ir para Minhas compras
+                </button>
+
+            </div>
+
+            <p id="mensagem"></p>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        function copiarCodigo() {
+
+            const codigo =
+                "00020126540014br.gov.bcb.pix0132pix_demo_pagamento";
+
+            navigator.clipboard.writeText(codigo);
+
+            document.getElementById("mensagem").innerText =
+                "Código de demonstração copiado.";
+
+        }
+
+    </script>
+
+</body>
+</html>
